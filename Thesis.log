@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.6)  26 DEC 2019 08:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.10.6)  31 DEC 2019 20:53
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -703,7 +703,13 @@ Chapter 1.
 
 
 
-]) (Chapters/Chapter2.tex [2]
+]
+Overfull \hbox (0.23828pt too wide) in paragraph at lines 21--22
+[]\OT1/cmr/m/n/10.95 PHP was stud-ied and prac-ticed in the Server-side Web Fra
+me-works mod-ule (COMP8001)
+ []
+
+) (Chapters/Chapter2.tex [2]
 Chapter 2.
 ------------------------------------------------------------------------------
  2 Background
@@ -820,7 +826,7 @@ rs/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 ts/cm/cmti12.pfb><D:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb><D:/Users/User/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Thesis.pdf (27 pages, 1706909 bytes).
+Output written on Thesis.pdf (27 pages, 1708660 bytes).
 PDF statistics:
  417 PDF objects out of 1000 (max. 8388607)
  76 named destinations out of 1000 (max. 500000)
