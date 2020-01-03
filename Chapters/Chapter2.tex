@@ -5,6 +5,71 @@ The key question to answer in this chapter is: "What has been done/is being done
 
 This chapter comprises around 4000 words and should put your project into context within Computer Science. Your focus here should be on the final section "Current State of the Art". This should be at least 2500 of the 4000 words of this section.
 
+System Architecture
+
+System architects are the designated experts responsible for a system’s architecture as well as the technical standards of a product. This includes technologies, platforms and infrastructure. They set the vision and their analysis is key to the product’s successful definition, design, delivery and life-time support. They therefore need to understand not only what the business need, but also what is logical, scalable, cost effective and in-line with the overall technology goals of the organisation. \cite{Clements2013}
+
+One of the vital skills of an architect is to be able to view the architecture from many different standpoints: each one of them individually might not be fully relevant but combining them together gives a helicopter view of the product. These standpoints comprise of principles, standards, patterns and anti-patterns, rules of thumb and empirical practices which are essential for decision making towards a particular direction and also evaluating the project’s success. \cite{Koen2019}
+
+
+SOLID Principles
+The SOLID principles do not only apply on software development but also when architecting a system.
+
+Single Responsibility Principle
+
+Each system capability (e.g. service/module/api) should have only one responsibility and as such one reason to change. Keeping the responsibilities as narrow as possible means that the users know of the intended purpose, which leads to less errors.
+
+Open-Closed Principle
+
+This principle proposes that it is preferable to extend a system behaviour, without modifying it. Although it is often not a good idea to try to anticipate changes in requirements ahead of time (as it can lead to over-complex designs), being able to adapt new functionality with minimum changes to existing components is key to the application’s longevity. \cite{Baniassad2018}
+
+Liskov Substitution Principle
+
+In Software Development, this means that derived classes must be substitutable for their base classes, but this principle’s resemblance with Bertrand Meyer’s Design by Contract is how it can be applied to Distributed Architecture: two services communicate effectively and repeatedly when there is a common ‘contract’ between them, which defines the inputs/outputs, their structure and their constraints. Therefore: given two distributed components with the same contract, one should be replaceable with other component with the same contract without altering the correctness of the system. \cite{Baniassad2018}
+
+Interface Segregation Principle
+
+Interfaces/contracts must be as fine grained as possible and client specific, so calling clients do not depend on functionality they don’t use. This goes hand in hand with the Single Responsibility principle: by breaking down interfaces, we favour Composition by separating by roles/responsibilities, and Decoupling by not coupling derivative modules with unneeded responsibilities. \cite{Noback2018}
+
+Dependency Inversion Principle
+High level modules should not depend on low level ones; they should both depend on abstractions. Likewise, abstractions should not depend on details, but details should depend on abstractions. As such this principle introduces an interface abstraction between higher-level and lower-level software components or layers to remove the dependencies between them.
+
+
+The ’Least’ Principles
+
+The principle of Least Astonishment
+
+The principle of least astonishment (or Least Surprise) \cite{Koen2019} suggests that a solution or approach would not surprise a reasonably knowledgeable person in the subject area when encountered for the first time (the audience may vary e.g. end-user, programmer, tester etc). In more practical terms, the principle aims to leverage the pre-existing knowledge of users to minimise their learning curve when using a module, so anything with high unpredictability factor is a good candidate for re-design.
+It applies to every single aspect of the architecture: from naming services, to the visualisation of user interfaces, to the design of the domain model.
+
+The principle of Least Effort
+
+This principle (also called Zipf’s Law) \cite{Kanwal2017} stems from a basic human behaviour: Everyone tends to follow the path that is as close to effortless as possible. So for example if our design follows a particular pattern, the next developer will follow the same pattern again and again unless there is a significantly easier way to perform the task, in which case they will change! Or, taking this further, once they find acceptable results for a task, there is no immediate need to improve the current solution. 
+
+Least effort is a variant of least work
+
+As such it is imperative to aim for a strong start by putting the right architecture in place: it sets high expectations and ensures that the quality is not compromised in the project’s lifecycle and it will be adhered to in case of future changes. Once the right design is in place, and architectural framework can be established which will be the bases for future projects of a similar architectural style.
+
+
+The principles of Economics
+
+The cost of making the most of an opportunity and the cost of delaying making decisions.
+
+The principle of Opportunity Cost
+Every time we make a choice, there is a certain value we place on that choice. Value has two parts: benefits and costs. The opportunity cost of a choice is what we give up to get it. To make a good economic decision, we want to choose the option with the greatest benefit to us but the lowest cost. \cite{Raymond2003}
+
+Architecture is weighing choices against each other and trying to make an informed decision on which one will add the most value for the project. For instance, a very common dichotomy is whether to create a tactical solution with quick time to market or a more strategic one which will be more expensive now with the view to leverage it in future projects and hence minimise the cost later down the line.
+
+The principle of Last Responsible Moment
+This principle (aka Cost of Delay) originates from Lean Software Development \cite{Dombrowski2014} and emphasises holding on taking important actions and crucial decisions for as long as possible. This is done so as to not eliminate important alternatives until the last possible moment i.e. wait to narrow the options down until you are better informed.
+A strategy of not making a premature decision but instead delaying commitment and keeping important and irreversible decisions open until the cost of not making a decision becomes greater than the cost of making a decision.
+
+One way to mitigate the risk of deciding too late is to build Proof of Concepts (POCs) to prototype the alternative options and demonstrate to the stakeholders what they are asking for.
+
+
+
+Data Visualisation
+
 Data visualization usually represents graphs and charts that are visual representations of data. These graphical displays provide a powerful way of summarizing and presenting data in a way that most people find easier to comprehend. Charts and graphs enable us to see the main features or characteristics of the data. The graphs not only enable us to present the numerical findings of a study, but also provide the shape and pattern of the data which are critical in data analysis and decision making. It is said that a picture is worth a thousand words; this is particularly true when a large set of data is effectively presented using charts and graphs that quickly reveal important features. Visual displays of data are easily recognizable and are found ubiquitously in business periodicals, financial magazines, on the Internet, and televisions. \cite{VisualizationOverview}
 
 Suraj Thatte writes in his article that data visualization has a strong design element to it. Given the differences in domains, applications and audience it’s hard to put a structure around the best way to visualize your data. \cite{Thatte2019}
@@ -36,7 +101,7 @@ Web scraping is used for content scraping and as a component for applications us
 Web pages are built using text based markup languages HTML and XHTML and frequently contain a wealth of useful data in text form. However most web pages are designed for human end users and not for ease of automated use, because of this, toolkits that scrape content were created. A web scraper is an API to extract data from a web site. Newer forms of web scraping involve listening to data feeds from web servers e.g. it is commonly used as a transport storage mechanism between the client and a web server.
 There are methods that some web sites use to prevent web scraping such as detecting and preventing bots from crawling and viewing their pages. In response there are web scraping systems that rely on using techniques and DOM parsing, computer vision and natural language processing to simulate human browsing to enable gathering web page content for offline parsing.
 
-
+The author has focused in on the Python library called BeautifulSoup. Beautiful Soup is a Python library for parsing structured data. It allows a developer to interact with HTML in a similar way to how someone would interact with a web page using developer tools within a browser. Beautiful Soup exposes a couple of intuitive functions you can use to explore the HTML you received. It is possible to parse through web page content by any element with a ‘class’ or ‘id’ tag attached to it and extract text content from within.
 
 
 \section{Thematic Area within Computer Science}
